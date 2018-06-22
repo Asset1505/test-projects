@@ -1,0 +1,12 @@
+<h1>Word counter project. <a href="{% url 'about' %}">About</a></h1>
+<h3>Welcome to my word counter web app, goal of this application
+  is count the number of words you typed in form below.
+</h3>
+<h3>All you need to do is type some words and then click "Count!" button.</h3>
+<h3>After that you'll jump to the next page, which will count words for you.</h3>
+
+<form action="{% url 'count' %}">
+  <textarea name="full_text" rows="8" cols="50"></textarea>
+  <br />
+  <input type="submit" value="Count!"/>
+</form>

@@ -1,0 +1,17 @@
+<h1>Hi there, you just jumped to the counting page.</h1>
+
+<form action="{% url 'homepage' %}">
+  <input type="submit" value="Go Back!">
+</form>
+
+<h2>Your text is below:</h2>
+{{full_text}}
+
+<h4>There are {{ count }} words.</h4>
+
+<h4>How many words:</h4>
+
+{% for word, count_total in sortedwords %}
+  {{ word }} - {{ count_total }}
+  <br />
+{% endfor %}
